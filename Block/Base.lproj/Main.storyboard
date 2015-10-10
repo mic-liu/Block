@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SUe-wB-uVh">
+                                <rect key="frame" x="38" y="60" width="300" height="30"/>
+                                <animations/>
+                                <state key="normal" title="ChangeTheValue"/>
+                                <connections>
+                                    <action selector="btnToSecond:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hC7-8f-gMe"/>
+                                </connections>
+                            </button>
+                            <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="这里将会显示从第二个页面传回来的值！" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKt-iz-RF3">
+                                <rect key="frame" x="16" y="127" width="343" height="60"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SUe-wB-uVh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="22" id="AlW-nc-wXz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YKt-iz-RF3" secondAttribute="trailing" id="O83-c0-IUI"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="YKt-iz-RF3" secondAttribute="leading" id="XKr-9j-VI6"/>
+                            <constraint firstItem="YKt-iz-RF3" firstAttribute="top" secondItem="SUe-wB-uVh" secondAttribute="bottom" constant="37" id="elC-Dv-dkw"/>
+                            <constraint firstItem="SUe-wB-uVh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="hck-pY-56Q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SUe-wB-uVh" secondAttribute="trailing" constant="21" id="qNh-g0-lzI"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="infoLabel" destination="YKt-iz-RF3" id="icy-d9-TC3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="425.5" y="-420.5"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="n2x-ir-BRD">
+            <objects>
+                <viewController storyboardIdentifier="second" id="pVN-oa-6g4" customClass="SecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WwI-l1-rUl"/>
+                        <viewControllerLayoutGuide type="bottom" id="pYq-lS-dWH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uwI-Fr-YEY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OTb-af-31Q">
+                                <rect key="frame" x="5" y="20" width="46" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <state key="normal" title="《"/>
+                                <connections>
+                                    <action selector="backToOneBtn:" destination="pVN-oa-6g4" eventType="touchUpInside" id="NrN-7H-xKY"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="我是第二个页面编辑的文字！" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9Ts-ay-Id6">
+                                <rect key="frame" x="20" y="58" width="335" height="128"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="K7Z-PU-sRw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="OTb-af-31Q" secondAttribute="trailing" constant="304" id="DwH-Vq-1M4"/>
+                            <constraint firstItem="9Ts-ay-Id6" firstAttribute="top" secondItem="OTb-af-31Q" secondAttribute="bottom" constant="8" id="IhF-Kv-flY"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="9Ts-ay-Id6" secondAttribute="leading" id="ctK-Og-3RE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9Ts-ay-Id6" secondAttribute="trailing" id="g7w-aW-A0C"/>
+                            <constraint firstItem="OTb-af-31Q" firstAttribute="top" secondItem="WwI-l1-rUl" secondAttribute="bottom" id="kBE-Ck-bYT"/>
+                            <constraint firstItem="OTb-af-31Q" firstAttribute="leading" secondItem="uwI-Fr-YEY" secondAttribute="leadingMargin" constant="-15" id="njU-6K-lLM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fM4-2E-ASs"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="inputText" destination="9Ts-ay-Id6" id="vNP-uI-55E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1sZ-Ql-67g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="782.5" y="338.5"/>
+        </scene>
+    </scenes>
+</document>
