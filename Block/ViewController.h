@@ -14,6 +14,5 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *infoLabel;
 
-
 @end
 
